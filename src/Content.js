@@ -79,56 +79,6 @@ import { useEffect, useState } from "react";
 //   );
 // }
 
-// // hiện ra kích thước chiều ngang mành hình mỗi khi thay đổi
-// function Content() {
-//   const [width, setWidth] = useState(window.innerWidth);
-
-//   useEffect(() => {
-//     const handleResize = () => {
-//       setWidth(window.innerWidth);
-//     };
-
-//     window.addEventListener("resize", handleResize);
-
-//     // cleanup function
-//     return () => {
-//       window.removeEventListener("resize", handleResize);
-//     };
-//   }, []);
-
-//   return (
-//     <div>
-//       <h1>{width}</h1>
-//     </div>
-//   );
-// }
-
-// // làm đồng hồ đếm ngược
-// function Content() {
-//   const [countdown, setCountdown] = useState(180);
-
-//   // useEffect(() => {
-//   //   setTimeout(() => {
-//   //     setCountdown(countdown - 1);
-//   //   }, 1000);
-//   // }, [countdown]);
-
-//   useEffect(() => {
-//     const timerId = setInterval(() => {
-//       setCountdown((prev) => prev - 1);
-//       console.log("Countdown");
-//     }, 1000);
-
-//     return () => clearInterval(timerId);
-//   }, []);
-
-//   return (
-//     <div>
-//       <h1>{countdown}</h1>
-//     </div>
-//   );
-// }
-
 // // chọn avatar
 // function Content() {
 //   const [avatar, setAvatar] = useState();
