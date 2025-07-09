@@ -8,6 +8,8 @@ import Count from "./Count";
 import Count2 from "./Count2";
 import Memo from "./Memo";
 import UseMemo from "./UseMemo";
+import UseReducer from "./UseReducer";
+import Todo from "./Todo";
 
 function App() {
   const [lesson, setLesson] = useState(false);
@@ -19,6 +21,8 @@ function App() {
   const [count2, setCount2] = useState(false);
   const [memo, setMemo] = useState(false);
   const [useMemo, setUseMemo] = useState(false);
+  const [useReducer, setUseReducer] = useState(false);
+  const [todo, setTodo] = useState(false);
 
   return (
     <div className="App" style={{ padding: 32 }}>
@@ -31,6 +35,8 @@ function App() {
       <button onClick={() => setCount2(!count2)}>Count2</button>
       <button onClick={() => setMemo(!memo)}>Memo</button>
       <button onClick={() => setUseMemo(!useMemo)}>UseMemo</button>
+      <button onClick={() => setUseReducer(!useReducer)}>UseReducer</button>
+      <button onClick={() => setTodo(!todo)}>Todo</button>
 
       {lesson && <Content />}
       {countdown && <Countdown />}
@@ -41,6 +47,8 @@ function App() {
       {count2 && <Count2 />}
       {memo && <Memo />}
       {useMemo && <UseMemo />}
+      {useReducer && <UseReducer />}
+      {todo && <Todo />}
     </div>
   );
 }
