@@ -1,4 +1,4 @@
-import { ADD_TODO, SET_TODO_INPUT } from "./const";
+import { ADD_TODO, DELETE_TODO, SET_TODO_INPUT } from "./const";
 
 const initState = {
   todos: [],
@@ -16,6 +16,13 @@ function Reducer(state, action) {
       return {
         ...state,
         todos: [...state.todos, action.payload],
+      };
+    case DELETE_TODO:
+      const newTodos = [...state.todos];
+      newTodos.splice(action.payload, 1);
+      return {
+        ...state,
+        todos: newTodos,
       };
     default:
       throw new Error("Invalid action");

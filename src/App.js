@@ -28,7 +28,10 @@ function App() {
       />
       <button onClick={handleSubmit}>Add</button>
       {todos.map((todo, index) => (
-        <li key={index}>{todo}</li>
+        <li key={index}>
+          {todo}
+          <span onClick={() => dispatch(actions.deleteTodo())}>&times;</span>
+        </li>
       ))}
     </div>
   );
