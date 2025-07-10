@@ -10,6 +10,7 @@ import Memo from "./Memo";
 import UseMemo from "./UseMemo";
 import UseReducer from "./UseReducer";
 import Todo from "./Todo";
+import Context from "./Context";
 
 function App() {
   const [lesson, setLesson] = useState(false);
@@ -23,6 +24,7 @@ function App() {
   const [useMemo, setUseMemo] = useState(false);
   const [useReducer, setUseReducer] = useState(false);
   const [todo, setTodo] = useState(false);
+  const [context, setContext] = useState(false);
 
   return (
     <div className="App" style={{ padding: 32 }}>
@@ -37,6 +39,7 @@ function App() {
       <button onClick={() => setUseMemo(!useMemo)}>UseMemo</button>
       <button onClick={() => setUseReducer(!useReducer)}>UseReducer</button>
       <button onClick={() => setTodo(!todo)}>Todo</button>
+      <button onClick={() => setContext(!context)}>Context</button>
 
       {lesson && <Content />}
       {countdown && <Countdown />}
@@ -49,6 +52,7 @@ function App() {
       {useMemo && <UseMemo />}
       {useReducer && <UseReducer />}
       {todo && <Todo />}
+      {context && <Context />}
     </div>
   );
 }
