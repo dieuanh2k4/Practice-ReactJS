@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GlobalStyles from "./Components/GlobalStyles";
 import Content from "./Content";
 import Countdown from "./Coundown";
 import Width from "./Size";
@@ -11,6 +12,7 @@ import UseMemo from "./UseMemo";
 import UseReducer from "./UseReducer";
 import Todo from "./Todo";
 import Context from "./Context";
+import CSS from "./CSS";
 
 function App() {
   const [lesson, setLesson] = useState(false);
@@ -25,35 +27,40 @@ function App() {
   const [useReducer, setUseReducer] = useState(false);
   const [todo, setTodo] = useState(false);
   const [context, setContext] = useState(false);
+  const [css, setCSS] = useState(false);
 
   return (
-    <div className="App" style={{ padding: 32 }}>
-      <button onClick={() => setLesson(!lesson)}>Lesson</button>
-      <button onClick={() => setCountdown(!countdown)}>Countdown</button>
-      <button onClick={() => setWidth(!width)}>Width</button>
-      <button onClick={() => setImg(!img)}>Image</button>
-      <button onClick={() => setTab(!tab)}>Tabs</button>
-      <button onClick={() => setCount(!count)}>Count</button>
-      <button onClick={() => setCount2(!count2)}>Count2</button>
-      <button onClick={() => setMemo(!memo)}>Memo</button>
-      <button onClick={() => setUseMemo(!useMemo)}>UseMemo</button>
-      <button onClick={() => setUseReducer(!useReducer)}>UseReducer</button>
-      <button onClick={() => setTodo(!todo)}>Todo</button>
-      <button onClick={() => setContext(!context)}>Context</button>
+    <GlobalStyles>
+      <div className="App">
+        <button onClick={() => setLesson(!lesson)}>Lesson</button>
+        <button onClick={() => setCountdown(!countdown)}>Countdown</button>
+        <button onClick={() => setWidth(!width)}>Width</button>
+        <button onClick={() => setImg(!img)}>Image</button>
+        <button onClick={() => setTab(!tab)}>Tabs</button>
+        <button onClick={() => setCount(!count)}>Count</button>
+        <button onClick={() => setCount2(!count2)}>Count2</button>
+        <button onClick={() => setMemo(!memo)}>Memo</button>
+        <button onClick={() => setUseMemo(!useMemo)}>UseMemo</button>
+        <button onClick={() => setUseReducer(!useReducer)}>UseReducer</button>
+        <button onClick={() => setTodo(!todo)}>Todo</button>
+        <button onClick={() => setContext(!context)}>Context</button>
+        <button onClick={() => setCSS(!css)}>CSS</button>
 
-      {lesson && <Content />}
-      {countdown && <Countdown />}
-      {width && <Width />}
-      {img && <Image />}
-      {tab && <Data />}
-      {count && <Count />}
-      {count2 && <Count2 />}
-      {memo && <Memo />}
-      {useMemo && <UseMemo />}
-      {useReducer && <UseReducer />}
-      {todo && <Todo />}
-      {context && <Context />}
-    </div>
+        {lesson && <Content />}
+        {countdown && <Countdown />}
+        {width && <Width />}
+        {img && <Image />}
+        {tab && <Data />}
+        {count && <Count />}
+        {count2 && <Count2 />}
+        {memo && <Memo />}
+        {useMemo && <UseMemo />}
+        {useReducer && <UseReducer />}
+        {todo && <Todo />}
+        {context && <Context />}
+        {css && <CSS />}
+      </div>
+    </GlobalStyles>
   );
 }
 
