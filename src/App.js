@@ -13,6 +13,7 @@ import UseReducer from "./UseReducer";
 import Todo from "./Todo";
 import Context from "./Context";
 import CSS from "./CSS";
+import Button from "./Button";
 
 function App() {
   const [lesson, setLesson] = useState(false);
@@ -28,6 +29,7 @@ function App() {
   const [todo, setTodo] = useState(false);
   const [context, setContext] = useState(false);
   const [css, setCSS] = useState(false);
+  const [button, setButton] = useState(false);
 
   return (
     <GlobalStyles>
@@ -45,6 +47,7 @@ function App() {
         <button onClick={() => setTodo(!todo)}>Todo</button>
         <button onClick={() => setContext(!context)}>Context</button>
         <button onClick={() => setCSS(!css)}>CSS</button>
+        <button onClick={() => setButton(!button)}>Button</button>
 
         {lesson && <Content />}
         {countdown && <Countdown />}
@@ -59,6 +62,7 @@ function App() {
         {todo && <Todo />}
         {context && <Context />}
         {css && <CSS />}
+        {button && <Button active />}
       </div>
     </GlobalStyles>
   );
